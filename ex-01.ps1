@@ -9,7 +9,12 @@ Author:
 
 Import-Module Cisco.UCSManager
 
-Connect-Ucs -Name 10.10.20.40
+$creds = new-object -typename System.Management.Automation.PSCredential `
+    -argumentlist "admin",$(convertto-securestring -Force -AsPlainText "password")
+
+$ucsm_ip = "54.161.223.201"
+
+Connect-Ucs -Name $ucsm_ip -Credential $creds
 
 # Query UCS Manager
 Get-UcsBlade

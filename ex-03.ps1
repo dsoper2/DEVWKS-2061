@@ -12,9 +12,9 @@ $(Get-Help Connect-Ucs)
 Import-Module Cisco.UCSManager
 
 $creds = new-object -typename System.Management.Automation.PSCredential `
-    -argumentlist "admin",$(convertto-securestring -Force -AsPlainText "Nbv12345")
+    -argumentlist "admin",$(convertto-securestring -Force -AsPlainText "password")
 
-$ucsm_ip = "10.10.20.40"
+$ucsm_ip = "54.161.223.201"
 
 Connect-Ucs -Name $ucsm_ip -Credential $creds
 

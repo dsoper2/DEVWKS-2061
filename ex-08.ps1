@@ -11,10 +11,11 @@ Author:
 Import-Module Cisco.UCSManager
 
 $creds = new-object -typename System.Management.Automation.PSCredential `
-    -argumentlist "admin",$(convertto-securestring -Force -AsPlainText "Nbv12345")
+    -argumentlist "admin",$(convertto-securestring -Force -AsPlainText "password")
 
-$source_ucsm_ip = "10.10.20.40"
-$target_ucsm_ip = "10.10.20.50"
+$source_ucsm_ip = "54.161.223.201"
+# target would typically be a different domain, same domain used in this example
+$target_ucsm_ip = "54.161.223.201"
 
 $ucsSource = Connect-Ucs -Name $source_ucsm_ip -Credential $creds -NotDefault
 $ucsTarget = Connect-Ucs -Name $target_ucsm_ip -Credential $creds -NotDefault
