@@ -13,10 +13,13 @@ For guided learning of the UCS PowerTool, DevNet Learning Lab Module [UCS PowerT
 
 ## Dependencies
 
-UCS Manager PowerTool is required, download from [Cisco.com](https://software.cisco.com/download/home/286305108/type/284574017).
+UCS Manager PowerTool is required (https://www.powershellgallery.com/profiles/Cisco)
+```
+Install-Module -Name Cisco.UCS.Core
+Install-Module -Name Cisco.UCSManager
+```
 
 UCS PowerTool Guides
-  - [Install](https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/sw/msft_tools/installation_guide/powertool/b_Pwrtool_Install_and_Config.html)
   - [User](https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/sw/msft_tools/powertools/ucs_powertool_book/2x/b_Cisco_UCSM_PowerTool_UG_Release_2x.html)
 
 ## Configuration
